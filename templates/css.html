@@ -1,0 +1,165 @@
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic|Oxygen' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+      /* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+      html, body, div, span, applet, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      a, abbr, acronym, address, big, cite, code,
+      del, dfn, em, img, ins, kbd, q, s, samp,
+      small, strike, strong, sub, sup, tt, var,
+      b, u, i, center,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, embed, 
+      figure, figcaption, footer, header, hgroup, 
+      menu, nav, output, ruby, section, summary,
+      time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article, aside, details, figcaption, figure, 
+      footer, header, hgroup, menu, nav, section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol, ul {
+        list-style: none;
+      }
+      blockquote, q {
+        quotes: none;
+      }
+      blockquote:before, blockquote:after,
+      q:before, q:after {
+        content: '';
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      /**********************************************/
+      * { box-sizing: border-box; }
+
+      .clearfix:before,
+      .clearfix:after {
+          content: " ";
+          display: table;
+      }
+
+      .clearfix:after {
+          clear: both;
+      }
+
+      body {
+        background: #d3cfc7;
+      }
+
+      .header-bar {
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+        padding: 13px 0;
+        width: 100%;
+      }
+
+      .header-inner {
+        margin: 0 auto;
+        width: 1024px;
+      }
+
+      .logo {
+        background:
+        url('data:image/png;base64,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') no-repeat;
+        height: 23px;
+        text-indent: -9999px;
+        width: 98px;
+      }
+      .container {
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+        margin: 40px auto 0;
+        padding: 40px;
+        width: 600px;
+      }
+
+      h2 {
+        color: #444;
+        font: 34px Oxygen, Tahoma, sans-serif;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      button {
+        border-radius: 3px;
+        border: none;
+        background: #d81e36;
+        color: #fff;
+        font-size: 14px;
+        padding: 10px 20px;
+        text-align: center;
+      }
+
+      button:hover {
+        cursor: pointer;
+      }
+
+      form {
+        float: left;
+        width: 50%;
+      }
+
+      .email-col {
+        padding-right: 20px;
+      }
+
+      .email-col button {
+        margin-top: 50px;
+      }
+
+      .email-col button {
+        background: #c21b30;
+      }
+
+      .signin-col {
+        border-left: 1px solid #ddd;
+        padding-left: 20px;
+      }
+
+      .signin-col button {
+        background: #ddd;
+        color: #444;
+      }
+
+      .signin-col button:hover {
+        background: #ccc;
+      }
+
+      input, label {
+        display: block;
+        width: 100%;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        margin-bottom: 10px;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+        font-size: 16px;
+        padding: 7px;
+        outline: none;
+      }
+
+      label {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+    </style>

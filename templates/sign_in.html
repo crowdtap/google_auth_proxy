@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" charset="utf-8">
+  <head>
+    <title>Sign In</title>
+    {{ template "css.html" }}
+  </head>
+  <body>
+    <div class="header-bar">
+      <div class="header-inner">
+        <h1 class="logo">Crowdtap</h1>
+      </div>
+    </div>
+
+    <div class="container clearfix">
+
+      <h2>Sign In</h2>
+
+      <form class="email-col" method="GET" action="/oauth2/start">
+        <input type="hidden" name="rd" value="{{.Redirect}}">
+        <button class="button" type="submit">sign in with your email</button>
+      </form>
+
+      {{ if .Htpasswd }}
+      <form class="signin-col" method="POST" action="/oauth2/sign_in">
+        <input type="hidden" name="rd" value="/">
+        <label for="username">username: </label>
+        <input id="username" type="text" name="username" size="10">
+
+        <label for="password">password:</label>
+        <input id="password" type="password" name="password" size="10">
+
+        <button type="submit">go</button>
+      </form>
+      {{ end }}
+    </div>
+  </body>
+</html>
